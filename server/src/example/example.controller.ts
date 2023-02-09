@@ -1,7 +1,8 @@
 import { InternalServerErrorException } from '@nestjs/common';
 import { Controller, Get, HttpCode } from '@nestjs/common';
 import { ExampleService } from './example.service';
-@Controller()
+
+@Controller('api')
 export class ExampleController {
   constructor(
     private readonly exampleService: ExampleService) { }

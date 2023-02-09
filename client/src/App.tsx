@@ -1,12 +1,30 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [title, setTitle] = useState('');
 
+  useEffect(() => {
+    console.log('init');
+
+    const getTitle = async () => {
+      console.log('run fetch');
+
+      const title =await (await fetch('/api/hello')).text();
+      console.log('title: ' + title);
+      setTitle(title);
+    };
+    console.log('call getTitle');
+
+    getTitle();
+  }, []);
+
+  console.log('render: ' + title);
   return (
     <div className="App">
+
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
@@ -16,6 +34,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <h2>{title}</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
