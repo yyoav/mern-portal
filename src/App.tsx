@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
+const baseUrl = 'https://mern-server-omega.vercel.app';
 function App() {
   const [count, setCount] = useState(0);
   const [title, setTitle] = useState('');
@@ -12,7 +13,7 @@ function App() {
     const getTitle = async () => {
       console.log('run fetch');
 
-      const title =await (await fetch('/api/hello')).text();
+      const title =await (await fetch(`{baseUrl}/api/hello`)).text();
       console.log('title: ' + title);
       setTitle(title);
     };
