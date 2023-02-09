@@ -13,7 +13,7 @@ function App() {
     const getTitle = async () => {
       console.log('run fetch');
 
-      const title =await (await fetch(`{baseUrl}/api/hello`)).text();
+      const title =await (await fetch(`${baseUrl}/api/hello`)).text();
       console.log('title: ' + title);
       setTitle(title);
     };
