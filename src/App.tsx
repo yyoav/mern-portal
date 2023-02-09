@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
-const baseUrl = 'https://mern-server-omega.vercel.app';
+const baseUrl = 'https://www.mern-server-omega.vercel.app';
 function App() {
   const [count, setCount] = useState(0);
   const [title, setTitle] = useState('');
@@ -47,6 +47,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <h2>Yoav</h2>
     </div>
   )
 }
