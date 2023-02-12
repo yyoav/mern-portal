@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
-const baseUrl = 'https://mern-server-gamma.vercel.app/';
+const baseUrl = 'https://mern-server-gamma.vercel.app';
 function App() {
   const [count, setCount] = useState(0);
   const [title, setTitle] = useState('');
