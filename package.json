@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "start": "cross-env REACT_SERVER_TARGET=http://localhost:3000 yarn dev",
+    "start:production": "cross-env REACT_SERVER_=https://mern-server-omega.vercel.app yarn dev",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
